@@ -1,14 +1,12 @@
 
 
-/* 1- header design */
+
 header.flex{
   justify-content: space-between;
   padding: 0 2.4rem;
   margin-top: 1.3rem;
 }
-/* .light header.flex nav{
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-} */
+
 header.flex nav{
   background-color: var(--bgHeader);
   padding: 0.77rem 1.6rem;
@@ -38,7 +36,7 @@ header button{
 header button.menu{
   display: none;
 }
-Model -Popup*/
+
 header .fixed{
     position: fixed;
     inset: 0;
@@ -86,13 +84,6 @@ header .fixed ul.model li a{
    .animationpaket{
     display: none;
    }
-    /* header.flex nav{
-        display: none;
-    }
-    
-header button.menu{
-    display: block;
-} */
 
 
 }

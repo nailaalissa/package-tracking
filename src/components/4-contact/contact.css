@@ -40,12 +40,7 @@
     border: 1px solid rgb(45, 212, 191);
 }
 
-.light .contact-us #email:hover, 
-.light .contact-us #message:hover ,
-.light .contact-us #email:focus,
-.light .contact-us #message:focus{
-    border: 1px solid rgb(12, 12, 12);
-}
+
 
 .contact-us #message{
     min-height: 9rem;
@@ -53,7 +48,7 @@
 }
 .contact-us .submit{
     background-color: rgb(40, 37, 37);
-    /* width:11rem; */
+
     padding: 0.76rem 2rem;
     text-align: center;
     font-size: 1.05rem;
@@ -70,7 +65,7 @@
 .contact-us .submit:hover{
     scale: 0.97;
 }
-/*  Media quiery  */
+
 @media (max-width:550px){
     .animation{
         display: none;

@@ -1,4 +1,3 @@
-// src/components/Track/Track.js
 import React, { useState, useEffect } from 'react';
 import ordersData from '../orders.json';
 import './track.css';
@@ -10,6 +9,7 @@ const Track = () => {
   const [filteredOrders, setFilteredOrders] = useState([]);
   const [searchField, setSearchField] = useState('id');
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedOrder, setSelectedOrder] = useState(null); // New state for selected order
 
   useEffect(() => {
     const fetchData = async () => {
@@ -46,7 +46,7 @@ const Track = () => {
   };
 
   const handleSelectOrder = (selectedOrder) => {
-    console.log('Selected Order:', selectedOrder);
+    setSelectedOrder(selectedOrder); // Update the selectedOrder state
   };
 
   return (
@@ -83,7 +83,17 @@ const Track = () => {
         <button onClick={handleShowAll}>Show All</button>
       </div>
 
-      {filteredOrders.length > 0 ? (
+      {selectedOrder ? ( // Check if a specific order is selected
+        <div>
+          <h2>Order Details</h2>
+          <p>Order ID: {selectedOrder.id}</p>
+          <p>Status: {selectedOrder.status}</p>
+          <p>ETA: {selectedOrder.eta}</p>
+          <p>Pickup Location: {selectedOrder.location_name}</p>
+          {/* Additional details can be displayed here */}
+          <button onClick={() => setSelectedOrder(null)}>Close</button>
+        </div>
+      ) : filteredOrders.length > 0 ? (
         <table>
           <thead>
             <tr>
@@ -103,9 +113,6 @@ const Track = () => {
                 <td>{order.location_name}</td>
                 <td>
                   <button onClick={() => handleSelectOrder(order)}>More Info</button>
-                  {/* <button onClick={() => handleChangeStatus(order.id, 'NewStatus')}>
-                    Change Status
-                  </button> */}
                 </td>
               </tr>
             ))}
