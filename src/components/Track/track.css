@@ -1,0 +1,81 @@
+/* Add this CSS to your existing styles or create a new CSS file */
+
+/* Button Styles */
+button {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  background-color: #4caf50; /* Green background color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Table Styles */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #4caf50; /* Green background color */
+  color: white;
+}
+
+/* Styles for the message when no results are available */
+p {
+  color: #777;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+.box{
+  margin: 1rem;
+  height: 2.5rem;
+}
+.animationpaket{
+  left: 10rem;
+  position: absolute;
+  top: -60px;
+  width: 300px ;
+  height: 400px;
+}
+@media (max-width: 900px){
+  .animationpaket{
+   display: none;
+  }
+  table tr th:nth-child(4), table tr td:nth-child(4),
+  table tr th:nth-child(5), table tr td:nth-child(5)
+      {
+          display: none;
+      }
+  
+   }
+  @media (max-width: 550px){
+
+button{
+  width: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.position{
+  display: flex;
+  flex-direction: column;
+}
+table{
+  overflow: hidden;
+}
+table tr th:nth-child(1), table tr td:nth-child(1),
+        table tr th:nth-child(3), table tr td:nth-child(3)
+        {
+            display: none;
+        }
+  }

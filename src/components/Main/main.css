@@ -1,0 +1,128 @@
+/*   table of Content
+1- left section 
+2- right section
+*/
+
+
+main.flex{
+  gap:1rem;
+  align-items: start;
+}
+/* left section */
+
+.left-section{
+  flex-direction: column;
+  gap:10px;
+}
+.left-section button{
+  background-color: rgb(40, 37, 37);
+  width:11rem;
+  padding: 0.76rem 0;
+  text-align: center;
+  font-size: 1.05rem;
+  text-transform: capitalize;
+  opacity: 0.5;
+  border-radius: 5px;
+  transition: 0.3s;
+
+
+}
+.left-section button:hover{
+  opacity:1;
+
+}
+.light .left-section button.active{
+  border: 1px solid black;
+}
+.left-section button.active{
+  opacity: 1;
+  font-weight: bold;
+  letter-spacing: 0.6px;
+  padding: 0.8rem 0;
+  border:1px solid var(--blue);
+}
+
+
+
+/* right section */
+
+main .right-section.flex{
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  column-gap: 16px;
+  justify-content: center;
+   flex-grow: 1; 
+}
+.light .card, .light .card:hover{
+
+
+  border:none
+}
+.card {
+  box-shadow: -1px 1px 1px rgba(0,0,0,0.16),1px 1px 1px rgba(0,0,0,0.15);
+  border: 1px solid rgba(93,288,252,0.3);
+  transition: 0.3s;
+  border-radius: 5px;
+  background-image: linear-gradient(rgba(255,255,255,0.05),rgba(255,255,255,0.05));
+}
+
+.card img {
+  border-radius: 5px;
+}
+.card:hover{
+  border: 1px solid var(--blue);
+  rotate: 1deg;
+  scale:1.01;
+  cursor: pointer;
+  background-color: rgba(246, 245, 245, 0.151);
+}
+.card .box{
+  padding: 0.5rem 0.4rem;
+}
+.box .title{
+  color: var(--title);
+  font-size: 1rem ;
+  text-transform: capitalize;
+ 
+}
+.box .subtitle{
+  color:var(--subtitle);
+  font-size: 0.8rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.8rem;
+}
+.box .icons{
+  justify-content: space-between;
+}
+.icon-hyperlink ,.icon-github{
+font-size: 1.2rem;
+color: var(--subtitle);
+}
+.icon-hyperlink:hover ,.icon-github:hover{
+  font-size: 1.25rem;
+  color: var(--icon-hover);
+  cursor: pointer;
+}
+.card .link{
+  font-size: 0.9rem;
+  color: var(--blue);
+  margin-right: 12px;
+}
+/* media quiery */
+@media (max-width: 600px) {
+  main.flex{
+      flex-direction: column;
+      align-items: center;
+  }
+  .left-section.flex{
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  .left-section.flex button{
+      width:7rem;
+      padding: 0.8rem 0;
+      font-size: 0.9rem;
+      
+  }
+}
