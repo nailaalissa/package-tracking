@@ -1,4 +1,4 @@
- <a href="https://nailaalissa.github.io/package-tracking"> Package Tracking Viewer </a>
+ <a href="https://nailaalissa.github.io/package-tracking"> <h1>Package Tracking Viewer </h1></a>
 
 A simple web app designed for our customers that displays a list of orders (or parcels) with essential details such as order status, estimated arrival times (ETAs), pickup locations, and more.
 
